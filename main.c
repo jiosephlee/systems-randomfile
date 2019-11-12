@@ -14,9 +14,9 @@ int random_int(){
     printf("Error: %d, %s",errno, strerror(errno));
     return -1;
   }else{
+    close(file);
     return output[0];
   }
-  close(file);
 }
 
 int main() {
